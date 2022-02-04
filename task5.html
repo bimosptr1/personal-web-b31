@@ -1,0 +1,151 @@
+<html>
+
+<head>
+  <title>Creating Blog Page</title>
+  <link rel="stylesheet" href="style5.css" />
+</head>
+
+<body>
+  <!--Nav Start-->
+  <nav>
+    <div class="left-side">
+      <a href="task3.html">
+        <img src="assets/logo.png" alt="mmpmp">
+      </a>
+
+      <ol>
+        <li>
+          <a href="task3.html">Home</a>
+        </li>
+        <li>
+          <a href="blog.html">My Project</a>
+        </li>
+      </ol>
+    </div>
+
+    <div class="right-side">
+      <a href="task2.html">Contact Me</a>
+    </div>
+  </nav>
+  <!--Nav Stop-->
+
+  <!-- Blog -->
+  <!-- Form -->
+  <div class="blog">
+    <div class="blog-form">
+      <div class="form-container">
+        <form onsubmit="addBlog(event)">
+          <h1>ADD MY PROJECT</h1>
+          <div>
+            <label for="input-blog-title">PROJECT NAME</label>
+            <input id="input-blog-title" />
+          </div>
+
+          <div class="startend">
+            <div class="startdiv">
+              <label>
+                START DATE
+                <input type="date" id="startdate" class="start" />
+              </label>
+            </div>
+            <div class="enddiv">
+              <label>
+                END DATE
+                <input type="date" id="stopdate" class="end" />
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="input-blog-content">DESCRIPTION</label>
+            <textarea id="input-blog-content"></textarea>
+          </div>
+
+          <div class="check">
+            <label>
+              TECHNOLOGIES
+            </label>
+
+            <div class="container">
+
+              <div class="divkiri">
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="ns">Node JS
+                </label>
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="rs">React JS
+                </label>
+              </div>
+
+              <div class="divkanan">
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="js">Javascript
+                </label>
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="ts">TypeScript
+                </label>
+              </div>
+            </div>
+
+            <label>Upload Image</label>
+            <div class="input-blog-image-group">
+              <label for="input-blog-image">
+                <p>CHOOSE</p>
+                <img src="assets/file.png" alt="file" />
+              </label>
+              <input type="file" id="input-blog-image" hidden />
+            </div>
+          </div>
+          <div class="button-group">
+            <button>Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <hr class="line" />
+    <div id="contents" class="blog-list">
+      <!-- dynamic content would be here -->
+      <div class="blog-list-item">
+        <div class="blog-image">
+          <img src="assets/blog-img.png" alt="" />
+        </div>
+        <div class="blog-content">
+          <h4>
+            <a href="blog-detail.html" target="_blank">Fullstack Development</a>
+          </h4>
+          <div class="detail-blog-content">
+            Durasi : 3 Bulan
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam minima in culpa itaque deleniti unde
+            quae aperiam ex architecto, blanditiis eveniet.
+          </p>
+
+          <div class="logo">
+            <div class="nodejs">
+              <img src="assets/node-js.png" alt="ns" id="nss">
+            </div>
+            <div class="reactjs">
+              <img src="assets/reactjs.png" alt="rs" id="rss">
+            </div>
+            <div class="javascript">
+              <img src="assets/js.png" alt="js" id="jss">
+            </div>
+            <div class="typescript">
+              <img src="assets/typescript.png" alt="ts" id="tss">
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn-edit">Edit Post</button>
+            <button class="btn-post">Post Blog</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="blog.js"></script>
+</body>
+
+</html>
