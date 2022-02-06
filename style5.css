@@ -110,7 +110,6 @@ nav .right-side a {
 }
 
 
-
 .blog-form form input,
 textarea,
 select {
@@ -158,11 +157,12 @@ select {
 
 .blog-form .form-container .container .option_item {
     display: flex;
-    justify-content: flex-start;
 }
 
-.blog-form .form-container .container .checkbox {
-    width: 50px;
+.blog-form .form-container .container input {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
 }
 
 .blog-form form .input-blog-image-group label p {
@@ -217,6 +217,7 @@ select {
     padding: 15px;
     margin: 40px;
     border: 2px solid #dbdbdb;
+    background-color: rgba(139, 139, 139, 0.431);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -230,6 +231,7 @@ select {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .blog .blog-list .blog-list-item .blog-content {
@@ -242,6 +244,7 @@ select {
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
+    object-fit: cover;
 }
 
 .blog .blog-list .btn-group .btn-edit {
@@ -289,7 +292,7 @@ select {
 }
 
 .blog .blog-list .blog-list-item .logo div {
-    margin: 10px;
+    margin: 5px;
 }
 
 /* Blog Detail */
@@ -302,32 +305,262 @@ select {
 .blog-detail-container {
     width: 80%;
     margin: 40px 0;
+    box-sizing: border-box;
 }
 
-.blog-detail-container img {
+.blog-detail-container .detcon {
+    display: flex;
+}
+
+.blog-detail-container .detcon .Lkiri {
+    width: 900px;
+    margin-right: 40px;
+}
+
+.blog-detail-container .detcon .Rkanan {
+    margin-left: 40px;
+}
+
+.blog-detail-container .detcon img {
     width: 100%;
+    object-fit: cover;
+}
+
+.detcon .Rkanan .text2 {
+    margin-top: 40px;
+}
+
+.detcon .Rkanan .text2 .log {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.blog-detail-container h3 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 50px;
 }
 
 .blog-detail-container h4 {
-    font-style: normal;
     font-weight: 800;
-    font-size: 44px;
+    font-size: 30px;
     line-height: 120%;
     margin-bottom: 15px;
 }
 
-.blog-detail-container .author {
-    font-weight: 100;
-    font-size: 20px;
-    line-height: 120%;
-    margin-bottom: 20px;
-}
-
 .blog-detail-container p {
     margin-top: 40px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     text-align: justify;
+}
+
+
+
+
+/* style index task 2 */
+/*container */
+
+.cardbox {
+    width: 1200px;
+    margin: 80px auto;
+    padding: 25px;
+    display: flex;
+    border: solid 3px orange;
+    background-color: seashell;
+    border-radius: 20px 0px 20px 0px;
+    box-sizing: border-box;
+}
+
+.cardbox div {
+    display: flex;
+    flex: 50%;
+    margin: 3px;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+/*items 1*/
+
+.cardbox div.boxleft {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+div.tulis {
+    flex-direction: column;
+}
+
+.boxleft h1 {
+    text-align: left;
+}
+
+.boxleft p {
+    text-align: justify;
+}
+
+.boxleft button {
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+}
+
+div.ngelink {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 3px;
+}
+
+.facontact {
+    margin-top: 25px;
+    padding: 5px 20px 5px 20px;
+}
+
+.fadownload {
+    padding: 5px 20px 5px 20px;
+    text-decoration: black;
+    font-weight: bold;
+    color: black;
+}
+
+
+.social-media {
+    padding: 5px;
+}
+
+.social-media img {
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+    border-style: groove;
+}
+
+
+/*items 2*/
+div.boxright {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxright div.gambar {
+    justify-content: center;
+    flex: 1;
+
+}
+
+.boxright img {
+    width: 380px;
+    border-radius: 15px 15px 0px 0px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+div.created {
+    width: 380px;
+    flex-direction: column;
+    margin: auto;
+    padding: 5px;
+    background-color: silver;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.boxright h3 {
+    text-align: center;
+}
+
+.boxright p {
+    text-align: center;
+}
+
+
+/*About*/
+
+.maincard {
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px 30px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.maincard .headline p {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.maincard .action {
+    width: 350px;
+    margin-top: 20px;
+}
+
+.action form {
+    text-align: left;
+}
+
+.action label {
+    font-weight: 700;
+}
+
+.action input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+}
+
+.action select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+}
+
+.action textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+}
+
+.action .tombol {
+    text-align: right;
+}
+
+.action button {
+    color: white;
+    background: #ec4d37;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 25px;
+    font-size: 15px;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Me</title>
+</head>
+<body">
+    <!--Nav Start-->
+    <nav>
+        <div class="left-side">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="mmpmp">
+            </a>
+
+            <ol>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="task5.html">My Project</a>
+                </li>
+            </ol>
+        </div>
+
+        <div class="right-side">
+        </div>
+    </nav>
+    <!--Nav Stop-->
+
+    <!--About-->
+    <div class="maincard">
+
+        <div class="headline">
+            <h1>GET IN TOUCH</h1>
+        </div>
+
+        <div class="action">
+            <form action="">
+
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" />
+                </div>
+
+                <div>
+                    <label for="mail">Email</label>
+                    <input id="mail" type="email" placeholder="mail@domain" />
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="text" />
+                </div>
+
+                <div>
+                    <label for="celas">Subject</label>
+                    <select id="celas">
+                        <option value="0" disabled selected>Select subject : </option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="Fullstack">Backend </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pesan">Your Message</label>
+                    <textarea id="pesan" maxlength="100" placeholder="Maksimal 100 huruf"></textarea>
+                </div>
+
+                <div class="tombol">
+                    <button type="button" onclick="showData()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Stop About-->
+
+    <script src="form.js">
+
+    </script>
+    </body>
+
+    </html>
