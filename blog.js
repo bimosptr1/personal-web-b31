@@ -7,11 +7,14 @@ function addBlog(event) {
 
   let title = document.getElementById("input-blog-title").value;
   let content = document.getElementById("input-blog-content").value;
+
+  let startdate = document.getElementById("startdate").value;
+  let stopdate = document.getElementById("stopdate").value;
+
   let image = document.getElementById("input-blog-image");
-  let ceklis = Array.from(document.querySelectorAll('input[type=checkbox]:checked')).map(item => item.value);
-
-
   image = URL.createObjectURL(image.files[0]);
+
+  let ceklis = Array.from(document.querySelectorAll('input[type=checkbox]:checked')).map(item => item.value);
 
   let blog = {
     author: `bims`,
@@ -33,8 +36,6 @@ function renderBlog() {
   let blogContainer = document.getElementById("contents");
   blogContainer.innerHTML = firstBlogContent();
 
-
-
   let i = 0;
   for (i; i < lengthData; i++) {
     let icons = blogs[i].ceklis.map(value => `<img src="assets/${value}">`)
@@ -49,7 +50,7 @@ function renderBlog() {
             <a href="blog-detail.html" target="_blank">${blogs[i].title}</a>
           </h4>
           <div class="detail-blog-content">
-            Duration : ${durationTime(blogs[i].day)}
+            Duration : ${durationTime(blogs[i].startdate, blogs[i].stopdate)}
           </div>
           <p>${blogs[i].content}</p>
           
@@ -111,15 +112,12 @@ function renderBlog() {
   }
 }
 
-function durationTime() {
+function durationTime(startdate, stopdate) {
   // Convert Start - End Date to Days
-  let startdate = document.getElementById("startdate").value;
-  let stopdate = document.getElementById("stopdate").value;
-
   let newStartDate = new Date(startdate)
   let newEndDate = new Date(stopdate)
-
   let duration = Math.abs(newStartDate - newEndDate)
+
   let day = Math.floor(duration / (1000 * 60 * 60 * 24))
 
   if (day < 30) {
